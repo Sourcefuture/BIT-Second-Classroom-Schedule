@@ -1,0 +1,138 @@
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #f5f6fa;
+    padding: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.filter {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+input[type="date"] {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.timeline-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 时间轴和刻度容器 */
+.axis-container {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.axis {
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+    grid-column: 2;
+    position: relative;
+}
+
+.ticks {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+    position: relative;
+}
+
+.tick-point {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 6px;
+    background: #999;
+}
+
+.courses-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    /* 红线参考父容器 */
+    padding-bottom: 10px;
+}
+
+.course-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    height: 28px;
+}
+
+.course-name {
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 6px;
+}
+
+.course-viz {
+    position: relative;
+    height: 100%;
+}
+
+.bar {
+    position: absolute;
+    height: 16px;
+    border-radius: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    overflow: hidden;
+    line-height: 16px;
+}
+
+.signin {
+    background: linear-gradient(90deg, #4a90e2, #357abd);
+}
+
+.signout {
+    background: linear-gradient(90deg, #7bc043, #4caf50);
+}
+
+.current-time-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: red;
+    z-index: 10;
+}
+
+.tooltip {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 13px;
+    color: #333;
+    display: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    white-space: nowrap;
+}

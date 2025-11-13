@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>课程签到/签退时间轴</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <h2>课程签到/签退时间轴（按日期筛选）</h2>
+  <div class="filter">
+    <label>选择日期：</label>
+    <input type="date" id="dateFilter">
+  </div>
+
+  <div class="timeline-container">
+    <div class="axis-container">
+      <div class="axis" id="axis"></div>
+      <div class="ticks" id="ticks"></div>
+    </div>
+    <div class="courses-stack" id="coursesContainer"></div>
+    <div class="current-time-line" id="currentTimeLine"></div>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
